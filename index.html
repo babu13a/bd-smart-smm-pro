@@ -1,1 +1,1353 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10152b">
 
+<title>BD Smart SMM PRO | Social Media Services</title>
+
+<meta name="description" content="BD Smart SMM PRO - Explore social media marketing services, prices and offers.">
+
+<style>
+:root {
+  --bg: #0b1020;
+  --panel: #141c32;
+  --panel2: #1b2641;
+  --text: #f4f7ff;
+  --muted: #a9b5ce;
+  --primary: #7357ff;
+  --green: #20cf87;
+  --border: rgba(255,255,255,.09);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, "Noto Sans Bengali", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(11,16,32,.96);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.nav {
+  min-height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -.5px;
+}
+
+.logo span {
+  color: #9b8aff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.menu-btn {
+  display: none;
+  background: var(--panel2);
+  color: white;
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.hero {
+  padding: 65px 0 45px;
+  background:
+    radial-gradient(ellipse at 10% 10%, rgba(115,87,255,.20), transparent 45%),
+    radial-gradient(ellipse at 90% 30%, rgba(32,207,135,.10), transparent 40%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  align-items: center;
+  gap: 35px;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(115,87,255,.15);
+  color: #c6bdff;
+  border: 1px solid rgba(115,87,255,.35);
+  padding: 7px 13px;
+  border-radius: 30px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: clamp(32px, 5vw, 54px);
+  line-height: 1.17;
+  margin-bottom: 18px;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #a69aff, #35e7ae);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 620px;
+  margin-bottom: 24px;
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  cursor: pointer;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 800;
+  text-align: center;
+  transition: .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  color: white;
+  background: linear-gradient(135deg, #7357ff, #4a83ff);
+}
+
+.btn-green {
+  color: #061c13;
+  background: var(--green);
+}
+
+.btn-outline {
+  color: white;
+  border: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.hero-card {
+  padding: 28px;
+  background: linear-gradient(145deg, #202b4b, #12192c);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 25px 70px rgba(0,0,0,.25);
+}
+
+.hero-icon {
+  font-size: 62px;
+  margin-bottom: 10px;
+}
+
+.hero-card h2 {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.hero-card p {
+  margin: 0;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.stat {
+  background: rgba(255,255,255,.05);
+  padding: 13px 8px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  font-size: 19px;
+}
+
+.stat small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+section {
+  padding: 48px 0;
+}
+
+.section-head {
+  margin-bottom: 24px;
+}
+
+.section-head h2 {
+  font-size: 28px;
+  margin-bottom: 7px;
+}
+
+.section-head p {
+  color: var(--muted);
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0,1fr));
+  gap: 12px;
+}
+
+.category {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 16px 8px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.category:hover,
+.category.active {
+  border-color: var(--primary);
+  background: #242348;
+}
+
+.category .icon {
+  font-size: 27px;
+  display: block;
+  margin-bottom: 7px;
+}
+
+.category span:last-child {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.search-row {
+  display: flex;
+  gap: 12px;
+  margin: 25px 0 18px;
+}
+
+.search-row input,
+.search-row select,
+.order-form input,
+.order-form select {
+  width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 13px 14px;
+  color: white;
+  outline: none;
+}
+
+select option {
+  background: #141c32;
+  color: white;
+}
+
+.search-row input:focus,
+.order-form input:focus,
+.order-form select:focus {
+  border-color: var(--primary);
+}
+
+.result-info {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 17px;
+}
+
+.service-card {
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.service-icon {
+  display: grid;
+  place-items: center;
+  width: 47px;
+  height: 47px;
+  flex-shrink: 0;
+  font-size: 25px;
+  background: var(--panel2);
+  border-radius: 12px;
+}
+
+.service-card h3 {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.service-category {
+  color: #b7aaff;
+  font-size: 12px;
+}
+
+.service-description {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.service-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.price {
+  font-size: 19px;
+  font-weight: 900;
+  color: #49e3aa;
+}
+
+.price small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.service-bottom .btn {
+  padding: 9px 12px;
+  font-size: 13px;
+}
+
+.empty {
+  grid-column: 1/-1;
+  padding: 35px;
+  text-align: center;
+  color: var(--muted);
+  background: var(--panel);
+  border-radius: 14px;
+}
+
+.notice {
+  background: rgba(255,190,75,.08);
+  border: 1px solid rgba(255,190,75,.2);
+  color: #ffe0a0;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 13px;
+  margin-top: 22px;
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 16px;
+}
+
+.offer {
+  background: linear-gradient(145deg, #222448, #141c32);
+  border: 1px solid var(--border);
+  padding: 22px;
+  border-radius: 16px;
+}
+
+.offer .offer-icon {
+  font-size: 35px;
+}
+
+.offer h3 {
+  margin: 10px 0 5px;
+}
+
+.offer p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.order-box {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 30px;
+  padding: 28px;
+  background: linear-gradient(135deg, #1e2644, #141c32);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.order-info p {
+  color: var(--muted);
+  margin: 12px 0;
+}
+
+.order-form {
+  display: grid;
+  gap: 12px;
+}
+
+.order-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.order-form .btn {
+  width: 100%;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 45px;
+  }
+
+  .categories {
+    grid-template-columns: repeat(4, minmax(0,1fr));
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-box {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: #11182c;
+    padding: 20px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 17px;
+  }
+
+  .categories {
+    grid-template-columns: repeat(3, minmax(0,1fr));
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-row {
+    flex-direction: column;
+  }
+
+  .hero-card {
+    padding: 20px;
+  }
+
+  .section-head h2 {
+    font-size: 24px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">BD <span>SMART SMM PRO</span></a>
+
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+      ☰ মেনু
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">হোম</a>
+      <a href="#categories">ক্যাটাগরি</a>
+      <a href="#services">সার্ভিস ও দাম</a>
+      <a href="#offers">CPA Offers</a>
+      <a href="#order">অর্ডার</a>
+      <a href="#contact">যোগাযোগ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">🚀 SOCIAL MEDIA MARKETING PLATFORM</div>
+
+      <h1>
+        আপনার সোশ্যাল মিডিয়াকে
+        <span class="gradient">আরও এগিয়ে নিন</span>
+      </h1>
+
+      <p>
+        বিভিন্ন সোশ্যাল মিডিয়া মার্কেটিং সার্ভিস, মূল্য ও অফার
+        এক জায়গায় দেখুন। পছন্দের সার্ভিস বেছে নিয়ে অর্ডারের
+        অনুরোধ WhatsApp-এ পাঠান।
+      </p>
+
+      <a class="btn btn-primary" href="#services">সার্ভিস দেখুন →</a>
+      <a class="btn btn-outline" href="#order">অর্ডার করুন</a>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>৭+</strong>
+          <small>ক্যাটাগরি</small>
+        </div>
+        <div class="stat">
+          <strong>২৪/৭</strong>
+          <small>অনলাইন অর্ডার ফর্ম</small>
+        </div>
+        <div class="stat">
+          <strong>সহজ</strong>
+          <small>অর্ডার প্রক্রিয়া</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-icon">🚀</div>
+      <h2>আপনার ডিজিটাল গ্রোথ শুরু হোক</h2>
+      <p>
+        সার্ভিস খুঁজুন, দাম দেখুন এবং আপনার প্রয়োজন অনুযায়ী
+        অর্ডারের অনুরোধ পাঠান।
+      </p>
+      <div class="notice">
+        ℹ️ অর্ডার পাঠানোর আগে সার্ভিসের শর্ত, মূল্য ও সরবরাহের
+        সময় নিশ্চিত করে নিন।
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="categories">
+  <div class="container">
+    <div class="section-head">
+      <h2>📂 সার্ভিস ক্যাটাগরি</h2>
+      <p>আপনার পছন্দের সোশ্যাল মিডিয়া নির্বাচন করুন।</p>
+    </div>
+
+    <div class="categories" id="categoryButtons">
+      <button class="category active" data-category="all">
+        <span class="icon">🌐</span>
+        <span>সব সার্ভিস</span>
+      </button>
+
+      <button class="category" data-category="Facebook">
+        <span class="icon">🔵</span>
+        <span>Facebook</span>
+      </button>
+
+      <button class="category" data-category="Instagram">
+        <span class="icon">📸</span>
+        <span>Instagram</span>
+      </button>
+
+      <button class="category" data-category="YouTube">
+        <span class="icon">▶️</span>
+        <span>YouTube</span>
+      </button>
+
+      <button class="category" data-category="TikTok">
+        <span class="icon">🎵</span>
+        <span>TikTok</span>
+      </button>
+
+      <button class="category" data-category="Telegram">
+        <span class="icon">✈️</span>
+        <span>Telegram</span>
+      </button>
+
+      <button class="category" data-category="Other">
+        <span class="icon">🌎</span>
+        <span>অন্যান্য</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <h2>🛍️ সার্ভিস ও মূল্য তালিকা</h2>
+      <p>সার্ভিস খুঁজুন এবং আপনার প্রয়োজন অনুযায়ী নির্বাচন করুন।</p>
+    </div>
+
+    <div class="search-row">
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="🔎 সার্ভিসের নাম লিখে খুঁজুন..."
+        aria-label="Search services"
+      >
+
+      <select id="sortSelect" aria-label="Sort services">
+        <option value="default">সাজানোর ধরন: ডিফল্ট</option>
+        <option value="low">কম দাম আগে</option>
+        <option value="high">বেশি দাম আগে</option>
+      </select>
+    </div>
+
+    <div class="result-info" id="resultInfo"></div>
+    <div class="services-grid" id="servicesGrid"></div>
+
+    <div class="notice">
+      ⚠️ নিচের দামগুলো শুধু ডেমো। এগুলো প্রকৃত সরবরাহকারীর
+      যাচাই করা দাম নয়। অর্ডার চালু করার আগে নিজের সঠিক মূল্য,
+      সার্ভিসের শর্ত ও সরবরাহের ব্যবস্থা নিশ্চিত করুন।
+    </div>
+  </div>
+</section>
+
+<section id="offers">
+  <div class="container">
+    <div class="section-head">
+      <h2>🎁 CPA Offers</h2>
+      <p>অফার ও প্রচারমূলক লিংকের জন্য আলাদা বিভাগ।</p>
+    </div>
+
+    <div class="offer-grid">
+      <div class="offer">
+        <div class="offer-icon">🎯</div>
+        <h3>Offer 01</h3>
+        <p>এখানে আপনার যাচাই করা CPA অফারের বিবরণ যুক্ত করুন।</p>
+        <a href="#contact" class="btn btn-outline">বিস্তারিত জানুন</a>
+      </div>
+
+      <div class="offer">
+        <div class="offer-icon">🎁</div>
+        <h3>Offer 02</h3>
+        <p>এখানে দ্বিতীয় অফারের বিবরণ ও শর্ত যুক্ত করুন।</p>
+        <a href="#contact" class="btn btn-outline">বিস্তারিত জানুন</a>
+      </div>
+
+      <div class="offer">
+        <div class="offer-icon">⭐</div>
+        <h3>Special Offer</h3>
+        <p>অনুমোদিত প্রচারমূলক অফার এখানে প্রদর্শন করুন।</p>
+        <a href="#contact" class="btn btn-outline">বিস্তারিত জানুন</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="container">
+    <div class="order-box">
+      <div class="order-info">
+        <div class="badge">🟢 WHATSAPP ORDER</div>
+        <h2>অর্ডারের অনুরোধ পাঠান</h2>
+        <p>
+          সার্ভিস নির্বাচন করুন, প্রয়োজনীয় তথ্য দিন এবং
+          WhatsApp-এ অর্ডারের বার্তা পাঠান।
+        </p>
+        <p>📱 মোবাইল থেকে সহজেই ব্যবহার করতে পারবেন।</p>
+      </div>
+
+      <form class="order-form" id="orderForm">
+        <div>
+          <label for="customerName">আপনার নাম</label>
+          <input
+            id="customerName"
+            type="text"
+            placeholder="আপনার নাম লিখুন"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="serviceSelect">সার্ভিস নির্বাচন</label>
+          <select id="serviceSelect" required>
+            <option value="">একটি সার্ভিস নির্বাচন করুন</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="quantity">পরিমাণ</label>
+          <select id="quantity" required>
+            <option value="1000">১,০০০</option>
+            <option value="2000">২,০০০</option>
+            <option value="5000">৫,০০০</option>
+            <option value="10000">১০,০০০</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="targetLink">পোস্ট বা প্রোফাইলের লিংক</label>
+          <input
+            id="targetLink"
+            type="url"
+            placeholder="https://..."
+            required
+          >
+        </div>
+
+        <div>
+          <label for="customerNote">অতিরিক্ত তথ্য (ঐচ্ছিক)</label>
+          <input
+            id="customerNote"
+            type="text"
+            placeholder="প্রয়োজনীয় তথ্য"
+          >
+        </div>
+
+        <button type="submit" class="btn btn-green">
+          WhatsApp-এ অর্ডার পাঠান →
+        </button>
+
+        <small style="color:var(--muted)">
+          এটি একটি অর্ডার অনুরোধ। পেমেন্ট বা সার্ভিস স্বয়ংক্রিয়ভাবে
+          সম্পন্ন হয় না।
+        </small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <h2>📞 যোগাযোগ</h2>
+      <p>সার্ভিস, মূল্য বা অর্ডার সম্পর্কে জানতে যোগাযোগ করুন।</p>
+    </div>
+
+    <div class="hero-card">
+      <h3>BD Smart SMM PRO</h3>
+      <p>
+        WhatsApp যোগাযোগ চালু করতে নিচের কোডে আপনার
+        WhatsApp নম্বর বসাতে হবে।
+      </p>
+      <br>
+      <a class="btn btn-green" id="contactWhatsApp" href="#">
+        WhatsApp যোগাযোগ
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> BD Smart SMM PRO</div>
+    <div>Professional Social Media Services</div>
+  </div>
+</footer>
+
+<script>
+/*
+  গুরুত্বপূর্ণ:
+  নিচের 8801XXXXXXXXX-এর জায়গায় আপনার WhatsApp নম্বর বসাবেন।
+  বাংলাদেশের নম্বর হলে 880 দিয়ে শুরু করুন।
+  +, স্পেস বা ড্যাশ ব্যবহার করবেন না।
+*/
+const WHATSAPP_NUMBER = "8801XXXXXXXXX";
+
+/*
+  নিচের মূল্যগুলো শুধু নমুনা।
+  আপনার প্রকৃত সার্ভিস ও মূল্য অনুযায়ী পরিবর্তন করুন।
+  কোনো সার্ভিস যোগ করতে বা মুছতে এই তালিকা সম্পাদনা করুন।
+*/
+const services = [
+  {
+    id: 1,
+    category: "Facebook",
+    icon: "🔵",
+    name: "Facebook Page Promotion",
+    description: "পেজ প্রচারের জন্য অনুমোদিত মার্কেটিং সহায়তা।",
+    price: 150,
+    unit: "প্রতি প্যাকেজ",
+    quantity: 1
+  },
+  {
+    id: 2,
+    category: "Facebook",
+    icon: "🔵",
+    name: "Facebook Post Promotion",
+    description: "পোস্টের প্রচার ও বিজ্ঞাপন পরিকল্পনা।",
+    price: 200,
+    unit: "প্রতি প্যাকেজ",
+    quantity: 1
+  },
+  {
+    id: 3,
+    category: "Facebook",
+    icon: "🔵",
+    name: "Facebook Video Promotion",
+    description: "ভিডিওর জন্য প্রচারমূলক ক্যাম্পেইন।",
+    price: 250,
+    unit: "প্রতি প্যাকেজ",
+    quantity: 1
+  },
+  {
+    id: 4,
+    category: "Facebook",
+    icon: "🔵",
+    name: "Facebook Ads Consultation",
+    description: "বিজ্ঞাপন সেটআপ ও প্রচার পরিকল্পনা।",
+    price: 500,
+    unit: "প্রতি সেশন",
+    quantity: 1
+  },
+  {
+    id: 5,
+    category: "Facebook",
+    icon: "🔵",
+    name: "Facebook Content Design",
+    description: "পেজের জন্য পোস্ট ডিজাইনের প্যাকেজ।",
+    price: 300,
+    unit: "প্রতি প্যাকেজ",
+    quantity: 1
+  },
+
+  {
+    id: 6,
+    category: "Instagram",
+    icon: "📸",
+    name: "Instagram Profile Audit",
+    description: "প্রোফাইল ও কনটেন্ট উন্নয়নের পরামর্শ।",
+    price: 200,
+    unit: "প্রতি সেশন",
+    quantity: 1
+  },
+  {
+    id: 7,
+    category: "Instagram",
+    icon: "📸",
+    name: "Instagram Post Promotion",
+    description: "পোস্টের জন্য অনুমোদিত প্রচার পরিকল্পনা।",
+    price: 250,
+    unit: "প্রতি প্যাকেজ",
+    quantity: 1
+  },
+  {
+    id: 8,
+    category: "Instagram",
+    icon: "📸",
+    name: "Instagram Reel Promotion",
+    description: "রিলের প্রচার ও কনটেন্ট পরিকল্পনা।",
+    price: 300,
+    unit: "প্রতি প্যাকেজ",
+    quantity: 1
+  },
+  {
+    id: 9,
+    category: "Instagram",
+    icon: "📸",
+    name: "Instagram Content Design",
+    description: "আকর্ষণীয় পোস্ট ও স্টোরি ডিজাইন।",
+    price: 350,
+    unit: "প্রতি প্যাকেজ",
+    quantity: 1
+  },
+  {
+    id: 10,
+    category: "Instagram",
+    icon: "📸",
+    name: "Instagram Marketing Plan",
+    description: "কনটেন্ট ক্যালেন্ডার ও গ্রোথ পরিকল্পনা।",
+    price: 500,
+    unit: "প্রতি প্যাকেজ",
+    quantity: 1
+  },
+
+  {
+    id: 11,
+    category: "YouTube",
+    icon: "▶️",
+    name: "YouTube Channel Audit",
+    description: "চ্যানেলের কনটেন্ট ও সেটআপ পর্যালোচনা।",
+    price: 300,
+    unit: "প্রতি সেশন",
+    quantity: 1
+  },
+  {
+    id: 12,
+    category: "YouTube",
+    icon: "▶️",
+    name: "YouTube Thumbnail Design",
+    description: "ভিডিওর জন্য কাস্টম থাম্বনেইল।",
+    price: 150,
+    unit: "প্রতি ডিজাইন",
+    quantity: 1
+  },
+  {
+    id: 13,
+    category: "YouTube",
+    icon: "▶️",
+    name: "YouTube Video SEO",
+    description: "শিরোনাম, বিবরণ ও ট্যাগ অপ্টিমাইজেশন।",
+    price: 250,
+    unit: "প্রতি ভিডিও",
+    quantity: 1
+  },
+  {
+    id: 14,
+    category: "YouTube",
+    icon: "▶️",
+    name: "YouTube Channel Branding",
+    description: "চ্যানেলের ব্যানার ও ভিজ্যুয়াল ডিজাইন।",
+    price: 600,
+    unit: "প্রতি প্যাকেজ",
+    quantity: 1
+  },
+  {
+    id: 15,
+    category: "YouTube",
+    icon: "▶️",
+    name: "YouTube Content Plan",
+    description: "ভিডিও বিষয় ও প্রকাশের পরিকল্পনা।",
+    price: 400,
+    unit: "প্রতি প্যাকেজ",
+    quantity: 1
+  },
+
+  {
+    id: 16,
+    category: "TikTok",
+    icon: "🎵",
+    name: "TikTok Profile Audit",
+    description: "প্রোফাইল উন্নয়নের পরামর্শ।",
+    price: 200,
+    unit: "প্রতি সেশন",
+    quantity: 1
+  },
+  {
+    id: 17,
+    category: "TikTok",
+    icon: "🎵",
+    name: "TikTok Video Editing",
+    description: "শর্ট ভিডিও সম্পাদনা।",
+    price: 300,
+    unit: "প্রতি ভিডিও",
+    quantity: 1
+  },
+  {
+    id: 18,
+    category: "TikTok",
+    icon: "🎵",
+    name: "TikTok Content Plan",
+    description: "ভিডিও আইডিয়া ও কনটেন্ট পরিকল্পনা।",
+    price: 250,
+    unit: "প্রতি প্যাকেজ",
+    quantity: 1
+  },
+  {
+    id: 19,
+    category: "TikTok",
+    icon: "🎵",
+    name: "TikTok Video Promotion",
+    description: "ভিডিও প্রচারের জন্য মার্কেটিং সহায়তা।",
+    price: 300,
+    unit: "প্রতি প্যাকেজ",
+    quantity: 1
+  },
+  {
+    id: 20,
+    category: "TikTok",
+    icon: "🎵",
+    name: "TikTok Video Cover Design",
+    description: "ভিডিওর জন্য কভার ডিজাইন।",
+    price: 150,
+    unit: "প্রতি ডিজাইন",
+    quantity: 1
+  },
+
+  {
+    id: 21,
+    category: "Telegram",
+    icon: "✈️",
+    name: "Telegram Channel Setup",
+    description: "চ্যানেল তৈরি ও প্রাথমিক সেটআপ।",
+    price: 250,
+    unit: "প্রতি প্যাকেজ",
+    quantity: 1
+  },
+  {
+    id: 22,
+    category: "Telegram",
+    icon: "✈️",
+    name: "Telegram Post Design",
+    description: "চ্যানেলের জন্য পোস্ট ডিজাইন।",
+    price: 150,
+    unit: "প্রতি ডিজাইন",
+    quantity: 1
+  },
+  {
+    id: 23,
+    category: "Telegram",
+    icon: "✈️",
+    name: "Telegram Channel Promotion",
+    description: "অনুমোদিত চ্যানেল প্রচার পরিকল্পনা।",
+    price: 300,
+    unit: "প্রতি প্যাকেজ",
+    quantity: 1
+  },
+  {
+    id: 24,
+    category: "Telegram",
+    icon: "✈️",
+    name: "Telegram Bot Consultation",
+    description: "বট তৈরির পরিকল্পনা ও পরামর্শ।",
+    price: 500,
+    unit: "প্রতি সেশন",
+    quantity: 1
+  },
+  {
+    id: 25,
+    category: "Telegram",
+    icon: "✈️",
+    name: "Telegram Content Plan",
+    description: "চ্যানেলের কনটেন্ট পরিকল্পনা।",
+    price: 250,
+    unit: "প্রতি প্যাকেজ",
+    quantity: 1
+  },
+
+  {
+    id: 26,
+    category: "Other",
+    icon: "❎",
+    name: "X Profile Audit",
+    description: "প্রোফাইল ও কনটেন্ট উন্নয়নের পরামর্শ।",
+    price: 200,
+    unit: "প্রতি সেশন",
+    quantity: 1
+  },
+  {
+    id: 27,
+    category: "Other",
+    icon: "🌐",
+    name: "Social Media Banner Design",
+    description: "সোশ্যাল মিডিয়ার জন্য ব্যানার ডিজাইন।",
+    price: 250,
+    unit: "প্রতি ডিজাইন",
+    quantity: 1
+  },
+  {
+    id: 28,
+    category: "Other",
+    icon: "🎨",
+    name: "Social Media Logo Design",
+    description: "ব্র্যান্ডের জন্য লোগো ডিজাইন।",
+    price: 400,
+    unit: "প্রতি ডিজাইন",
+    quantity: 1
+  },
+  {
+    id: 29,
+    category: "Other",
+    icon: "📊",
+    name: "Social Media Strategy",
+    description: "সোশ্যাল মিডিয়া মার্কেটিং পরিকল্পনা।",
+    price: 600,
+    unit: "প্রতি প্যাকেজ",
+    quantity: 1
+  },
+  {
+    id: 30,
+    category: "Other",
+    icon: "🎬",
+    name: "Short Video Editing",
+    description: "Reels, Shorts ও অন্যান্য শর্ট ভিডিও এডিটিং।",
+    price: 350,
+    unit: "প্রতি ভিডিও",
+    quantity: 1
+  }
+];
+
+let selectedCategory = "all";
+
+const servicesGrid = document.getElementById("servicesGrid");
+const searchInput = document.getElementById("searchInput");
+const sortSelect = document.getElementById("sortSelect");
+const resultInfo = document.getElementById("resultInfo");
+const serviceSelect = document.getElementById("serviceSelect");
+
+function formatPrice(amount) {
+  return "৳" + Number(amount).toLocaleString("en-US");
+}
+
+function renderServices() {
+  const query = searchInput.value.trim().toLowerCase();
+
+  let filtered = services.filter(service => {
+    const matchesCategory =
+      selectedCategory === "all" ||
+      service.category === selectedCategory;
+
+    const searchable =
+      service.name + " " +
+      service.category + " " +
+      service.description;
+
+    return matchesCategory &&
+      searchable.toLowerCase().includes(query);
+  });
+
+  if (sortSelect.value === "low") {
+    filtered.sort((a, b) => a.price - b.price);
+  }
+
+  if (sortSelect.value === "high") {
+    filtered.sort((a, b) => b.price - a.price);
+  }
+
+  resultInfo.textContent =
+    "মোট " + filtered.length + "টি সার্ভিস পাওয়া গেছে";
+
+  if (filtered.length === 0) {
+    servicesGrid.innerHTML =
+      '<div class="empty">দুঃখিত, কোনো সার্ভিস পাওয়া যায়নি। অন্য নাম লিখে খুঁজুন।</div>';
+    return;
+  }
+
+  servicesGrid.innerHTML = filtered.map(service => `
+    <article class="service-card">
+      <div class="service-top">
+        <div class="service-icon">${service.icon}</div>
+        <div>
+          <h3>${service.name}</h3>
+          <div class="service-category">${service.category}</div>
+        </div>
+      </div>
+
+      <p class="service-description">${service.description}</p>
+
+      <div class="service-bottom">
+        <div class="price">
+          ${formatPrice(service.price)}
+          <small>${service.unit} · নমুনা মূল্য</small>
+        </div>
+
+        <button
+          class="btn btn-primary"
+          type="button"
+          onclick="chooseService(${service.id})">
+          অর্ডার
+        </button>
+      </div>
+    </article>
+  `).join("");
+}
+
+function populateServiceSelect() {
+  serviceSelect.innerHTML =
+    '<option value="">একটি সার্ভিস নির্বাচন করুন</option>' +
+    services.map(service =>
+      `<option value="${service.id}">
+        ${service.name} — ${formatPrice(service.price)}
+      </option>`
+    ).join("");
+}
+
+function chooseService(id) {
+  serviceSelect.value = String(id);
+  document.getElementById("order").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+document.getElementById("categoryButtons")
+  .addEventListener("click", event => {
+    const button = event.target.closest("[data-category]");
+    if (!button) return;
+
+    selectedCategory = button.dataset.category;
+
+    document.querySelectorAll(".category").forEach(item => {
+      item.classList.toggle("active", item === button);
+    });
+
+    renderServices();
+
+    document.getElementById("services").scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+
+searchInput.addEventListener("input", renderServices);
+sortSelect.addEventListener("change", renderServices);
+
+document.getElementById("orderForm")
+  .addEventListener("submit", event => {
+    event.preventDefault();
+
+    const name =
+      document.getElementById("customerName").value.trim();
+
+    const selectedId = Number(serviceSelect.value);
+    const service = services.find(item => item.id === selectedId);
+
+    const quantity =
+      Number(document.getElementById("quantity").value);
+
+    const targetLink =
+      document.getElementById("targetLink").value.trim();
+
+    const note =
+      document.getElementById("customerNote").value.trim();
+
+    if (!service) {
+      alert("দয়া করে একটি সার্ভিস নির্বাচন করুন।");
+      return;
+    }
+
+    if (!/^\d{10,15}$/.test(WHATSAPP_NUMBER) ||
+        WHATSAPP_NUMBER === "8801XXXXXXXXX") {
+      alert(
+        "WhatsApp অর্ডার চালু করতে প্রথমে কোডে নিজের WhatsApp নম্বর বসাতে হবে।"
+      );
+      return;
+    }
+
+    const message =
+`BD Smart SMM PRO - অর্ডারের অনুরোধ
+
+নাম: ${name}
+সার্ভিস: ${service.name}
+ক্যাটাগরি: ${service.category}
+পরিমাণ: ${quantity}
+নমুনা একক মূল্য: ${formatPrice(service.price)}
+পোস্ট/প্রোফাইল লিংক: ${targetLink}
+অতিরিক্ত তথ্য: ${note || "নেই"}
+
+অনুগ্রহ করে প্রকৃত মূল্য ও সার্ভিসের শর্ত নিশ্চিত করুন।`;
+
+    const whatsappURL =
+      "https://wa.me/" + WHATSAPP_NUMBER +
+      "?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank", "noopener");
+  });
+
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
+
+document.querySelectorAll("#navLinks a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("navLinks").classList.remove("show");
+  });
+});
+
+document.getElementById("contactWhatsApp")
+  .addEventListener("click", event => {
+    if (!/^\d{10,15}$/.test(WHATSAPP_NUMBER) ||
+        WHATSAPP_NUMBER === "8801XXXXXXXXX") {
+      event.preventDefault();
+      alert(
+        "WhatsApp চালু করতে কোডে নিজের WhatsApp নম্বর বসাতে হবে।"
+      );
+      return;
+    }
+
+    event.currentTarget.href =
+      "https://wa.me/" + WHATSAPP_NUMBER;
+  });
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+populateServiceSelect();
+renderServices();
+</script>
+
+</body>
+</html>
